@@ -384,6 +384,53 @@
   color: white;
 }
 
+.event-card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 12px;
+        margin-bottom: 12px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        font-family: Arial, sans-serif;
+    }
+
+    .event-date {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    .event-info {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .calendar-links img {
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+
+    .calendar-links a:last-child img {
+        margin-right: 0;
+    }
+
+    /* Remove sublinhado e define estilo para todos os links */
+a {
+    text-decoration: none;  /* remove o sublinhado */
+    color: inherit;         /* herda a cor do elemento pai */
+}
+
+/* Opcional: adicionar efeito de hover */
+a:hover {
+    text-decoration: underline;  /* mostra sublinhado apenas ao passar o mouse */
+    color: #007BFF;              /* muda a cor ao passar o mouse */
+}
+
+/* Estilização específica para os ícones de calendário */
+.calendar-buttons a img {
+    vertical-align: middle;      /* alinha verticalmente os ícones */
+    margin-right: 6px;           /* espaço entre ícones */
+}
+
         </style>
     </head>
     <body>  
@@ -420,99 +467,79 @@
 
         <main>
             <h2 id="schedule-title">Programação</h2>
-
-            <table aria-label="Programação de eventos">
-                <thead>
-                    <tr>
-                        <th id="th-date">Data</th>
-                        <th id="th-time">Horário</th>
-                        <th id="th-event">Evento</th>
-                        <th id="th-location">Local</th>
-                        <th id="th-add">Adicionar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>19/11/2025</td>
-                        <td>19h00</td>
-                        <td style="text-align:left;">Abertura (Lisboa)</td>
-                        <td style="text-align:center;">
-                            <a href="https://www.google.com/maps/place/Feira+Internacional+de+Lisboa,+R.+do+Bojador,+1998-010+Lisboa,+Portugal" target="_blank" rel="noopener" title="Feira Internacional de Lisboa - Ver no Google Maps">
-                                <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cd.svg" alt="pin" style="width:20px;vertical-align:middle;margin-right:6px;">
-                            </a>
+            <div>
+                <!-- Evento 1 -->
+                <div class="event-card">
+                    <div class="event-date">19/11/2025 - 19h00</div>
+                    <div class="event-info"><strong>Evento:</strong> Abertura (Lisboa)</div>
+                    <div class="event-info">
+                        <strong>Local:</strong> 
+                        <a href="https://www.google.com/maps/place/Feira+Internacional+de+Lisboa,+R.+do+Bojador,+1998-010+Lisboa,+Portugal" target="_blank" rel="noopener">
                             Feira Internacional de Lisboa
-                        </td>
-                        <td style="text-align:center;">
-                            <!-- Google Calendar (ctz=Europe/Lisbon) -->
-                            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Abertura+Lisboa&dates=20251119T193000/20251119T203000&details=Evento+de+Abertura+em+Lisboa&location=Feira+Internacional+de+Lisboa,+R.+do+Bojador,+1998-010+Lisboa,+Portugal&ctz=Europe/Lisbon" target="_blank" rel="noopener" title="Adicionar ao Google Calendar">
-                                <img src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_16_2x.png" alt="Google Calendar" style="width:24px;vertical-align:middle;">
-                            </a>
-                            <!-- iOS/Outlook (.ics) - DTSTART/DTEND sem Z e usando codificação correta -->
-                            <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Abertura%20(Lisboa)%0ADTSTART:20251119T193000%0ADTEND:20251119T203000%0ADESCRIPTION:Evento%20de%20Abertura%20em%20Lisboa%0ALOCATION:Feira%20Internacional%20de%20Lisboa%2C%20R.%20do%20Bojador%2C%201998-010%20Lisboa%2C%20Portugal%0AEND:VEVENT%0AEND:VCALENDAR" download="Abertura_Lisboa.ics" title="Adicionar ao iOS/Outlook">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Calendar" style="width:22px;vertical-align:middle;">
-                            </a>
-                        </td>
-                    </tr>
+                        </a>
+                    </div>
+                    <div class="calendar-links">
+                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Abertura+Lisboa&dates=20251119T193000/20251119T203000&details=Evento+de+Abertura+em+Lisboa&location=Feira+Internacional+de+Lisboa,+R.+do+Bojador,+1998-010+Lisboa,+Portugal&ctz=Europe/Lisbon" target="_blank">
+                            <img src="images/icons8-google-calendar.svg" alt="Apple Calendar" width="48">
+                        </a>
+                        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Abertura+Lisboa%0ADTSTART:20251119T193000%0ADTEND:20251119T203000%0ADESCRIPTION:Evento+de+Abertura+em+Lisboa%0ALOCATION:Feira+Internacional+de+Lisboa%0AEND:VEVENT%0AEND:VCALENDAR" download="Abertura_Lisboa.ics">
+                            <img src="images/macoscalendar.png" alt="Apple Calendar" width="48">
+                        </a>
+                    </div>
+                </div>
 
-                    <tr>
-                        <td>21/11/2025</td>
-                        <td>19h00</td>
-                        <td style="text-align:left;">Festividade dos Jovens</td>
-                        <td style="text-align:center;">
-                            <a href="https://www.google.com/maps/place/Multiusos+de+Gondomar" target="_blank" rel="noopener" title="Multiusos de Gondomar - Ver no Google Maps">
-                                <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cd.svg" alt="pin" style="width:20px;vertical-align:middle;margin-right:6px;">
-                            </a>
-                            Porto
-                        </td>
-                        <td style="text-align:center;">
-                            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Festividade+dos+Jovens+Porto&dates=20251121T193000/20251121T203000&details=Festividade+dos+Jovens+em+Porto&location=Multiusos+de+Gondomar&ctz=Europe/Lisbon" target="_blank" rel="noopener" title="Adicionar ao Google Calendar">
-                                <img src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_16_2x.png" alt="Google Calendar" style="width:24px;vertical-align:middle;">
-                            </a>
-                            <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Festividade%20dos%20Jovens%20(Porto)%0ADTSTART:20251121T193000%0ADTEND:20251121T203000%0ADESCRIPTION:Festividade%20dos%20Jovens%20em%20Porto%0ALOCATION:Multiusos%20de%20Gondomar%0AEND:VEVENT%0AEND:VCALENDAR" download="Festividade_Jovens_Porto.ics" title="Adicionar ao iOS/Outlook">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Calendar" style="width:22px;vertical-align:middle;">
-                            </a>
-                        </td>
-                    </tr>
+                <!-- Evento 2 -->
+                <div class="event-card">
+                    <div class="event-date">21/11/2025 - 19h00</div>
+                    <div class="event-info"><strong>Evento:</strong> Festividade dos Jovens</div>
+                    <div class="event-info">
+                        <strong>Local:</strong> 
+                        <a href="https://www.google.com/maps/place/Multiusos+de+Gondomar" target="_blank" rel="noopener">
+                            Porto - Multiusos de Gondomar
+                        </a>
+                    </div>
+                    <div class="calendar-links">
+                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Festividade+dos+Jovens+Porto&dates=20251121T193000/20251121T203000&details=Festividade+dos+Jovens+em+Porto&location=Multiusos+de+Gondomar&ctz=Europe/Lisbon" target="_blank">
+                            <img src="images/icons8-google-calendar.svg" alt="Apple Calendar" width="48">
+                        </a>
+                        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Festividade%20dos%20Jovens%20(Porto)%0ADTSTART:20251121T193000%0ADTEND:20251121T203000%0ADESCRIPTION:Festividade%20dos%20Jovens%20em%20Porto%0ALOCATION:Multiusos%20de%20Gondomar%0AEND:VEVENT%0AEND:VCALENDAR" download="Festividade_Jovens_Porto.ics">
+                            <img src="images/macoscalendar.png" alt="Apple Calendar" width="48">
+                        </a>
+                    </div>
+                </div>
 
-                    <tr>
-                        <td>22/11/2025</td>
-                        <td>18h00</td>
-                        <td style="text-align:left;">20 Anos do Círculo de Oração</td>
-                        <td style="text-align:center;">
-                            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cd.svg" alt="pin" style="width:20px;vertical-align:middle;margin-right:6px;">
-                            Porto
-                        </td>
-                        <td style="text-align:center;">
-                            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=20+Anos+do+Circulo+de+Oracao+Porto&dates=20251122T180000/20251122T200000&details=20+Anos+do+Circulo+de+Oracao+em+Porto&location=Multiusos+de+Gondomar&ctz=Europe/Lisbon" target="_blank" rel="noopener" title="Adicionar ao Google Calendar">
-                                <img src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_16_2x.png" alt="Google Calendar" style="width:24px;vertical-align:middle;">
-                            </a>
-                            <!-- OBS: codificação correta de 'Círculo' -->
-                            <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:20%20Anos%20do%20C%C3%ADrculo%20de%20Ora%C3%A7%C3%A3o%20(Porto)%0ADTSTART:20251122T180000%0ADTEND:20251122T200000%0ADESCRIPTION:20%20Anos%20do%20C%C3%ADrculo%20de%20Ora%C3%A7%C3%A3o%20em%20Porto%0ALOCATION:Multiusos%20de%20Gondomar%0AEND:VEVENT%0AEND:VCALENDAR" download="Circulo_Oracao_Porto.ics" title="Adicionar ao iOS/Outlook">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Calendar" style="width:22px;vertical-align:middle;">
-                            </a>
-                        </td>
-                    </tr>
+                <!-- Evento 3 -->
+                <div class="event-card">
+                    <div class="event-date">22/11/2025 - 18h00</div>
+                    <div class="event-info"><strong>Evento:</strong> 20 Anos do Círculo de Oração</div>
+                    <div class="event-info"><strong>Local:</strong> Porto - Multiusos de Gondomar</div>
+                    <div class="calendar-links">
+                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=20+Anos+do+Circulo+de+Oracao+Porto&dates=20251122T180000/20251122T200000&details=20+Anos+do+Circulo+de+Oracao+em+Porto&location=Multiusos+de+Gondomar&ctz=Europe/Lisbon" target="_blank">
+                            <img src="images/icons8-google-calendar.svg" alt="Apple Calendar" width="48">
+                        </a>
+                        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:20%20Anos%20do%20C%C3%ADrculo%20de%20Ora%C3%A7%C3%A3o%20(Porto)%0ADTSTART:20251122T180000%0ADTEND:20251122T200000%0ADESCRIPTION:20%20Anos%20do%20C%C3%ADrculo%20de%20Ora%C3%A7%C3%A3o%20em%20Porto%0ALOCATION:Multiusos%20de%20Gondomar%0AEND:VEVENT%0AEND:VCALENDAR" download="Circulo_Oracao_Porto.ics">
+                             <img src="images/macoscalendar.png" alt="Apple Calendar" width="48">
+                        </a>
+                    </div>
+                </div>
 
-                    <tr>
-                        <td>23/11/2025</td>
-                        <td>18h00</td>
-                        <td style="text-align:left;">20 Anos da Missão</td>
-                        <td style="text-align:center;">
-                            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cd.svg" alt="pin" style="width:20px;vertical-align:middle;margin-right:6px;">
-                            Porto
-                        </td>
-                        <td style="text-align:center;">
-                            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=20+Anos+da+Missao+Porto+Noite&dates=20251123T180000/20251123T200000&details=20+Anos+da+Missao+em+Porto+(Noite)&location=Multiusos+de+Gondomar&ctz=Europe/Lisbon" target="_blank" rel="noopener" title="Adicionar ao Google Calendar">
-                                <img src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_16_2x.png" alt="Google Calendar" style="width:24px;vertical-align:middle;">
-                            </a>
-                            <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:20%20Anos%20da%20Miss%C3%A3o%20(Porto)%20-%20Noite%0ADTSTART:20251123T180000%0ADTEND:20251123T200000%0ADESCRIPTION:20%20Anos%20da%20Miss%C3%A3o%20em%20Porto%20-%20Noite%0ALOCATION:Multiusos%20de%20Gondomar%0AEND:VEVENT%0AEND:VCALENDAR" download="Missao_Noite_Porto.ics" title="Adicionar ao iOS/Outlook">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Calendar" style="width:22px;vertical-align:middle;">
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
+                <!-- Evento 4 -->
+                <div class="event-card">
+                    <div class="event-date">23/11/2025 - 18h00</div>
+                    <div class="event-info"><strong>Evento:</strong> 20 Anos da Missão</div>
+                    <div class="event-info"><strong>Local:</strong> Porto - Multiusos de Gondomar</div>
+                    <div class="calendar-links">
+                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=20+Anos+da+Missao+Porto+Noite&dates=20251123T180000/20251123T200000&details=20+Anos+da+Missao+em+Porto+(Noite)&location=Multiusos+de+Gondomar&ctz=Europe/Lisbon" target="_blank">
+                            <img src="images/icons8-google-calendar.svg" alt="Apple Calendar" width="48">
+                        </a>
+                        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:20%20Anos%20da%20Miss%C3%A3o%20(Porto)%20-%20Noite%0ADTSTART:20251123T180000%0ADTEND:20251123T200000%0ADESCRIPTION:20%20Anos%20da%20Miss%C3%A3o%20em%20Porto%20-%20Noite%0ALOCATION:Multiusos%20de%20Gondomar%0AEND:VEVENT%0AEND:VCALENDAR" download="Missao_Noite_Porto.ics">
+                             <img src="images/macoscalendar.png" alt="Apple Calendar" width="48">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            
             <!-- Localizações e mapa -->
             <div class="locations">
               <h3 id="location-title">Localizações</h3>
