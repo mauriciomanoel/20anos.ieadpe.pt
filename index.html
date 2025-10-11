@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="pt">  
+    <head>
+        <title>20 Anos | IEADPE Portugal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Celebração dos 20 anos da Missão da Assembléia de Deus na Europa. Participe dos eventos especiais em Lisboa e Porto.">
+        <meta name="keywords" content="IEADPE, Assembléia de Deus, Missão, 20 anos, Lisboa, Porto, eventos, celebração">
+        <meta name="author" content="IEADPE Portugal">
+        <link rel="icon" type="image/png" href="images/favicon.ico">
+        <!-- Fonte Poppins -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <!-- Font Awesome para ícones de redes sociais -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            :root{
+                --primary:#007bff;
+                --dark:#004aad;
+                --card-bg: rgba(255,255,255,0.95);
+            }
+
+            html,body{
+                height:100%;
+                margin:0;
+            }
+
+            body {
+                font-family: 'Poppins', Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                min-height: 100vh;
+                margin: 0;
+                position: relative;
+                background: url('images/background.jpg') no-repeat center center fixed;
+                background-size: cover;
+                color: #222;
+            }
+            /* overlay para legibilidade sobre a imagem de fundo */
+            body::before {
+                content: "";
+                position: fixed;
+                inset: 0;
+                background: rgba(255,255,255,0.88);
+                z-index: 0;
+                pointer-events: none;
+            }
+
+            header{
+                width:100%;
+                max-width:1200px;
+                padding: 18px 20px;
+                display:flex;
+                align-items:center;
+                justify-content:space-between;
+                gap:12px;
+                position:relative;
+                z-index:1;
+            }
+
+            .brand {
+                display:flex;
+                align-items:center;
+                gap:12px;
+            }
+
+            .brand img {
+                width:56px;
+                height:56px;
+                object-fit:contain;
+            }
+
+            .brand h1{
+                font-family: 'Poppins', Arial, sans-serif;
+                font-size:28px;
+                margin:0;
+                color:var(--dark);
+                line-height:1;
+            }
+
+            nav {
+                background: var(--primary);
+                width:100%;
+                max-width:1200px;
+                padding: 10px 0;
+                margin: 12px 0;
+                border-radius:12px;
+                position:relative;
+                z-index:1;
+            }
+
+            nav ul{
+                display:flex;
+                justify-content:center;
+                gap:30px;
+                list-style:none;
+                margin:0;
+                padding:0;
+            }
+
+            nav a{
+                color:#fff;
+                text-decoration:none;
+                font-size:18px;
+                font-weight:600;
+            }
+
+            main {
+                width:100%;
+                max-width:1200px;
+                margin: 10px 16px 40px;
+                padding: 20px;
+                background: var(--card-bg);
+                border-radius: 14px;
+                box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+                position:relative;
+                z-index:1;
+            }
+
+            h2 {
+                color: var(--dark);
+                font-size:26px;
+                margin: 8px 0 12px;
+                text-align:center;
+            }
+
+            h3 {
+                color: var(--dark);
+                font-size:20px;
+                margin: 8px 0;
+            }
+
+            p { font-size:16px; margin:6px 0; color:#222; }
+
+            .img-row {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10px;
+                position: relative;
+                z-index: 1;
+            }
+            .reveal-img {
+                width: 350px;
+                max-width: 90vw;
+                border-radius: 28px;
+                animation: pulse 2s infinite;
+                display: block;
+                margin: 0 10px;
+                background: transparent;
+            }
+            .small-img {
+                width: 180px;
+                max-width: 50vw;
+            }
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+                100% { transform: scale(1); }
+            }
+
+            /* Tabela de programação */
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                max-width: 100%;
+                margin-top: 12px;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            thead {
+                background: var(--dark);
+                color: #fff;
+            }
+
+            th, td {
+                padding: 12px;
+                text-align: center;
+                font-size:15px;
+                vertical-align: middle;
+            }
+
+            tbody tr {
+                background: #fff;
+            }
+
+            tbody tr:nth-child(even){ background:#f7fbff; }
+
+            .map-container {
+                width: 98vw;
+                max-width: 900px;
+                height: 400px;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            }
+
+            .contact {
+              text-align: center;
+              line-height: 1.6;
+            }
+
+            .contact h3 {
+              color: #004aad;
+              font-weight: 600;
+              margin-bottom: 10px;
+            }
+
+            .contact p {
+              color: #333;
+              font-size: 0.95rem;
+            }
+
+            .contact-person {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            }
+
+            .contact-person strong {
+            font-size: 1.05rem;
+            color: #111;
+            }
+
+            .contact-person span {
+            color: #555;
+            display: block;
+            font-size: 0.95rem;
+            }
+
+            .locations {
+              text-align: center;
+              margin-top: 60px;
+            }
+
+            .locations h3 {
+              color: #004aad;
+              font-weight: 600;
+              margin-bottom: 10px;
+            }
+
+            .location-block {
+              margin-top: 30px;
+              max-width: 700px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+
+            .location-block p {
+              color: #333;
+              font-size: 0.95rem;
+              line-height: 1.6;
+            }
+
+            .map-container {
+              margin-top: 15px;
+              border-radius: 12px;
+              overflow: hidden;
+              box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+
+            .map-responsive{
+                overflow:hidden;
+                padding-bottom:56.25%;
+                position:relative;
+                height:0;
+            }
+            .map-responsive iframe{
+                left:0;
+                top:0;
+                height:90%;
+                width:100%;
+                position:absolute;
+            }
+
+            .social {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.social h3 {
+  color: #004aad;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.social-group {
+  margin-bottom: 25px;
+}
+
+.social-group h4 {
+  color: #222;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 5px 10px;
+  text-decoration: none;
+  color: #004aad;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff6b00;
+  transform: scale(1.05);
+}
+
+.social-links i {
+  margin-right: 6px;
+}
+
+
+            footer {
+                width:100%;
+                max-width:1200px;
+                padding: 18px;
+                text-align:center;
+                font-size:14px;
+                color:#444;
+                position:relative;
+                z-index:1;
+            }
+
+            .lang-selector {
+              display:flex;
+              align-items:center;
+              gap:8px;
+              background: #fff;
+              padding:6px 8px;
+              border-radius:8px;
+              box-shadow:0 2px 6px rgba(0,0,0,0.08);
+              border:1px solid #eee;
+            }
+
+            .lang-selector img { width:26px; height:18px; border-radius:3px; display:inline-block; }
+
+            /* Responsividade */
+            @media (max-width: 900px) {
+                header { padding:12px; }
+                .brand h1 { font-size:20px; }
+                .reveal-img { width: 90vw; border-radius:18px; }
+                .small-img { width: 60vw; border-radius:12px; }
+                th, td { padding:10px; font-size:14px; }
+                .map-container { height: 260px; }
+            }
+
+            @media (max-width: 600px) {
+                nav ul { gap:14px; }
+                .brand img { width:48px; height:48px; }
+                header { flex-direction:column; gap:8px; align-items:flex-start; }
+            }
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 35px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+        </style>
+    </head>
+    <body>  
+        <header>
+            <div class="brand" aria-label="Marca">
+                <img src="images/icon_ieadpe.png" alt="IEADPE Portugal">
+                <div>
+                    <h1 id="main-title">20 Anos da Missão da Assembléia de Deus na Europa</h1>
+                    <p style="margin:0; font-size:13px; color:#333;">Celebração dos 20 anos — Porto & Lisboa</p>
+                </div>
+            </div>
+
+            <!-- Language selector -->
+            <div class="lang-selector" style="margin-left:auto;">
+                <img id="flag-img" src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/pt.svg" alt="PT">
+                <select id="lang-select" aria-label="Idioma" style="border:none; background:transparent; font-family:inherit; font-size:15px;">
+                    <option value="pt" data-flag="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/pt.svg">Português</option>
+                    <option value="en" data-flag="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg">English</option>
+                </select>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a id="nav-home" href="index.html">Início</a></li>
+                <li><a id="nav-site" href="https://www.ieadpe.pt/" target="_blank" rel="noopener">Site IEADPE Portugal</a></li>
+            </ul>
+        </nav>
+
+        <!-- Imagem destaque (mantive o seu arquivo original icon_transpa.png) -->
+        <div class="img-row" style="position:relative; z-index:1;">
+            <img class="reveal-img" src="images/20anos.png" alt="20 anos IEADPE">
+        </div>
+
+        <main>
+            <h2 id="schedule-title">Programação</h2>
+
+            <table aria-label="Programação de eventos">
+                <thead>
+                    <tr>
+                        <th id="th-date">Data</th>
+                        <th id="th-time">Horário</th>
+                        <th id="th-event">Evento</th>
+                        <th id="th-location">Local</th>
+                        <th id="th-add">Adicionar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>19/11/2025</td>
+                        <td>19h00</td>
+                        <td style="text-align:left;">Abertura (Lisboa)</td>
+                        <td style="text-align:center;">
+                            <a href="https://www.google.com/maps/place/Feira+Internacional+de+Lisboa,+R.+do+Bojador,+1998-010+Lisboa,+Portugal" target="_blank" rel="noopener" title="Feira Internacional de Lisboa - Ver no Google Maps">
+                                <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cd.svg" alt="pin" style="width:20px;vertical-align:middle;margin-right:6px;">
+                            </a>
+                            Feira Internacional de Lisboa
+                        </td>
+                        <td style="text-align:center;">
+                            <!-- Google Calendar (ctz=Europe/Lisbon) -->
+                            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Abertura+Lisboa&dates=20251119T193000/20251119T203000&details=Evento+de+Abertura+em+Lisboa&location=Feira+Internacional+de+Lisboa,+R.+do+Bojador,+1998-010+Lisboa,+Portugal&ctz=Europe/Lisbon" target="_blank" rel="noopener" title="Adicionar ao Google Calendar">
+                                <img src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_16_2x.png" alt="Google Calendar" style="width:24px;vertical-align:middle;">
+                            </a>
+                            <!-- iOS/Outlook (.ics) - DTSTART/DTEND sem Z e usando codificação correta -->
+                            <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Abertura%20(Lisboa)%0ADTSTART:20251119T193000%0ADTEND:20251119T203000%0ADESCRIPTION:Evento%20de%20Abertura%20em%20Lisboa%0ALOCATION:Feira%20Internacional%20de%20Lisboa%2C%20R.%20do%20Bojador%2C%201998-010%20Lisboa%2C%20Portugal%0AEND:VEVENT%0AEND:VCALENDAR" download="Abertura_Lisboa.ics" title="Adicionar ao iOS/Outlook">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Calendar" style="width:22px;vertical-align:middle;">
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>21/11/2025</td>
+                        <td>19h00</td>
+                        <td style="text-align:left;">Festividade dos Jovens</td>
+                        <td style="text-align:center;">
+                            <a href="https://www.google.com/maps/place/Multiusos+de+Gondomar" target="_blank" rel="noopener" title="Multiusos de Gondomar - Ver no Google Maps">
+                                <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cd.svg" alt="pin" style="width:20px;vertical-align:middle;margin-right:6px;">
+                            </a>
+                            Porto
+                        </td>
+                        <td style="text-align:center;">
+                            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Festividade+dos+Jovens+Porto&dates=20251121T193000/20251121T203000&details=Festividade+dos+Jovens+em+Porto&location=Multiusos+de+Gondomar&ctz=Europe/Lisbon" target="_blank" rel="noopener" title="Adicionar ao Google Calendar">
+                                <img src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_16_2x.png" alt="Google Calendar" style="width:24px;vertical-align:middle;">
+                            </a>
+                            <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Festividade%20dos%20Jovens%20(Porto)%0ADTSTART:20251121T193000%0ADTEND:20251121T203000%0ADESCRIPTION:Festividade%20dos%20Jovens%20em%20Porto%0ALOCATION:Multiusos%20de%20Gondomar%0AEND:VEVENT%0AEND:VCALENDAR" download="Festividade_Jovens_Porto.ics" title="Adicionar ao iOS/Outlook">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Calendar" style="width:22px;vertical-align:middle;">
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>22/11/2025</td>
+                        <td>18h00</td>
+                        <td style="text-align:left;">20 Anos do Círculo de Oração</td>
+                        <td style="text-align:center;">
+                            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cd.svg" alt="pin" style="width:20px;vertical-align:middle;margin-right:6px;">
+                            Porto
+                        </td>
+                        <td style="text-align:center;">
+                            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=20+Anos+do+Circulo+de+Oracao+Porto&dates=20251122T180000/20251122T200000&details=20+Anos+do+Circulo+de+Oracao+em+Porto&location=Multiusos+de+Gondomar&ctz=Europe/Lisbon" target="_blank" rel="noopener" title="Adicionar ao Google Calendar">
+                                <img src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_16_2x.png" alt="Google Calendar" style="width:24px;vertical-align:middle;">
+                            </a>
+                            <!-- OBS: codificação correta de 'Círculo' -->
+                            <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:20%20Anos%20do%20C%C3%ADrculo%20de%20Ora%C3%A7%C3%A3o%20(Porto)%0ADTSTART:20251122T180000%0ADTEND:20251122T200000%0ADESCRIPTION:20%20Anos%20do%20C%C3%ADrculo%20de%20Ora%C3%A7%C3%A3o%20em%20Porto%0ALOCATION:Multiusos%20de%20Gondomar%0AEND:VEVENT%0AEND:VCALENDAR" download="Circulo_Oracao_Porto.ics" title="Adicionar ao iOS/Outlook">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Calendar" style="width:22px;vertical-align:middle;">
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>23/11/2025</td>
+                        <td>18h00</td>
+                        <td style="text-align:left;">20 Anos da Missão</td>
+                        <td style="text-align:center;">
+                            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cd.svg" alt="pin" style="width:20px;vertical-align:middle;margin-right:6px;">
+                            Porto
+                        </td>
+                        <td style="text-align:center;">
+                            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=20+Anos+da+Missao+Porto+Noite&dates=20251123T180000/20251123T200000&details=20+Anos+da+Missao+em+Porto+(Noite)&location=Multiusos+de+Gondomar&ctz=Europe/Lisbon" target="_blank" rel="noopener" title="Adicionar ao Google Calendar">
+                                <img src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_16_2x.png" alt="Google Calendar" style="width:24px;vertical-align:middle;">
+                            </a>
+                            <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:20%20Anos%20da%20Miss%C3%A3o%20(Porto)%20-%20Noite%0ADTSTART:20251123T180000%0ADTEND:20251123T200000%0ADESCRIPTION:20%20Anos%20da%20Miss%C3%A3o%20em%20Porto%20-%20Noite%0ALOCATION:Multiusos%20de%20Gondomar%0AEND:VEVENT%0AEND:VCALENDAR" download="Missao_Noite_Porto.ics" title="Adicionar ao iOS/Outlook">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Calendar" style="width:22px;vertical-align:middle;">
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Localizações e mapa -->
+            <div class="locations">
+              <h3 id="location-title">Localizações</h3>
+
+              <div class="location-block">
+                <h3 id="location-city-porto">Porto</h3>
+                <p id="porto-location-info">
+                  <strong>Local:</strong> Multiusos de Gondomar<br>
+                  <strong>Endereço:</strong> Rua de São Pedro, 4420-000 Gondomar, Portugal
+                </p>
+                <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.959704565452!2d-8.541433323514239!3d41.13540561158665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2463254c5a16b9%3A0xb4be3084dab0aab5!2sMultiusos%20de%20Gondomar!5e0!3m2!1spt-BR!2sus!4v1760209384417!5m2!1spt-BR!2sus" width="200" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                  </div>
+              </div>
+
+              <div class="location-block">
+                <h3 id="location-city-lisboa">Lisboa</h3>
+                <p id="lisboa-location-info">
+                  <strong>Local:</strong> Feira Internacional de Lisboa<br>
+                  <strong>Endereço:</strong> R. do Bojador, 1998-010 Lisboa, Portugal<br>              
+                  <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.738458316312!2d-9.096141923601806!3d38.76970235422804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19318e59d6d825%3A0x5f1f18c3a0e2ef71!2sFeira%20Internacional%20de%20Lisboa!5e0!3m2!1spt-BR!2sus!4v1760209314935!5m2!1spt-BR!2sus" width="200" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                  </div>
+                </p>
+              </div>
+            </div>
+
+            <!-- Contatos -->
+            <div class="contact">
+              <h3 id="contact-title">Entre em Contato</h3>
+              <div class="contact-person">
+                <strong>Pr. Gilberto Diniz</strong><br>
+                <span>Pastor Local do Porto</span>
+                <span>+351 912 345 678</span>
+              </div>
+              <br>
+              <div class="contact-person">
+                <strong>Ev. Sameque Oliveira</strong><br>
+                <span>Pastor Local de Lisboa</span>
+                <span>+351 987 654 321</span>
+              </div>
+            </div>
+
+            <div class="social" style="text-align:center; margin-top:20px;">
+                <h3>Redes Sociais</h3>
+
+                <div style="margin-top:10px;">
+                    <h4>IEADPE Porto</h4>
+                    <a href="https://www.facebook.com/ieadpeporto" class="fa fa-facebook"></a>
+                    <a href="https://www.youtube.com/ieadpeporto" class="fa fa-youtube"></a>
+                    <a href="https://www.instagram.com/ieadpeporto" class="fa fa-instagram"></a>
+                </div>
+
+                <div style="margin-top:15px;">
+                    <h4>IEADPE Lisboa</h4>
+                    <a href="https://www.facebook.com/ieadpelisboa" class="fa fa-facebook"></a>
+                    <a href="https://www.youtube.com/ieadpelisboa" class="fa fa-youtube"></a>
+                    <a href="https://www.instagram.com/ieadpelisboa" class="fa fa-instagram"></a>
+                </div>
+            </div>
+            
+            <div style="width: 100%; display: flex; justify-content: center; margin-top: 24px;">
+                <img class="reveal-img small-img" src="images/ainda_ha_lugar.png" alt="20 anos POC" style="border-radius:20px;">
+            </div>
+        </main>
+
+        <footer>
+            © 2025 IEADPE Portugal — Todos os direitos reservados.
+        </footer>
+
+        <script>
+            // Textos em português e inglês
+            const texts = {
+                pt: {
+                    navHome: "Início",
+                    navSite: "Site IEADPE Portugal",
+                    mainTitle: "20 Anos da Missão da Assembléia de Deus na Europa",
+                    scheduleTitle: "Programação",
+                    thDate: "Data",
+                    thTime: "Horário",
+                    thEvent: "Evento",
+                    thLocation: "Local",
+                    thAdd: "Adicionar",
+                    scheduleText: `<strong>Dia 1: Abertura:</strong> 19 de Novembro 2025, 19h00, LISBOA<br>
+                        <strong>Dia 2: Festividade dos Jovens:</strong> 21 de Novembro 2025, 19h00, PORTO<br>
+                        <strong>Dia 3: 20 Anos do Círculo de Oração:</strong> 22 de Novembro 2025, 18h00, PORTO<br>
+                        <strong>Dia 4: 20 Anos da Missão:</strong> 23 de Novembro 2025, 10h00 e 18h00, PORTO<br>`,
+                    contactTitle: "Entre em Contato",
+                    contactText: `<strong>Pastor Local do Porto: Pr Gilberto Diniz:</strong> tlm: 123 456 789<br>
+                        <strong>Pastor Local de Lisboa: Ev. Sameque Oliveira:</strong> tlm: 123 456 789<br>`,
+                    locationTitle: "Localizações",
+                    locationCity: "Porto",
+                    lisboalocationcity: "Lisboa",
+                    locationText: "Veja abaixo o mapa para local do evento:",
+                    portoLocationInfo: `<strong>Local:</strong> Multiusos de Gondomar<br><strong>Endereço:</strong> Rua de São Pedro, 4420-000 Gondomar, Portugal<br>`,
+                    lisboaLocationInfo: `<strong>Local:</strong> Feira Internacional de Lisboa<br><strong>Endereço:</strong> R. do Bojador, 1998-010 Lisboa, Portugal<br>`
+                },
+                en: {
+                    navHome: "Home",
+                    navSite: "IEADPE Portugal Website",
+                    mainTitle: "20 Years of the Assembly of God Mission in Europe",
+                    scheduleTitle: "Schedule",
+                    thDate: "Date",
+                    thTime: "Time",
+                    thEvent: "Event",
+                    thLocation: "Location",
+                    thAdd: "Add to your Calendar",
+                    scheduleText: `<strong>Day 1: Opening:</strong> November 19, 2025, 7:30 PM, LISBON<br>
+                        <strong>Day 2: Youth Celebration:</strong> November 21, 2025, 7:30 PM, PORTO<br>
+                        <strong>Day 3: 20th Anniversary of the Prayer Circle:</strong> November 22, 2025, 6:00 PM, PORTO<br>
+                        <strong>Day 4: 20th Anniversary of the Mission:</strong> November 23, 2025, 10:00 AM and 6:00 PM, PORTO<br>`,
+                    contactTitle: "Contact Us",
+                    contactText: `<strong>Local Pastor of the Porto church: Pr Gilberto Diniz:</strong> Phone: 123 456 789<br>
+                        <strong>Local Pastor of the Lisbon church: Ev. Sameque Oliveira:</strong> Phone: 123 456 789<br>`,
+                    locationTitle: "Locations",
+                    locationCity: "Porto",
+                    lisboalocationcity: "Lisbon",
+                    locationText: "See the map for the event location below:",
+                    portoLocationInfo: `<strong>Event site:</strong> Multiusos de Gondomar<br><strong>Address:</strong> Rua de São Pedro, 4420-000 Gondomar, Portugal<br>`,
+                    lisboaLocationInfo: `<strong>Event site:</strong> Feira Internacional de Lisboa<br><strong>Address:</strong> R. do Bojador, 1998-010 Lisboa, Portugal<br>`
+                }
+            };
+
+            // Dados das linhas da tabela (mantendo a estrutura original, em ambos os idiomas)
+            const scheduleRows = {
+                pt: [
+                    [
+                        "19/11/2025", "19h00", "Abertura (Lisboa)",
+                        `<a href="https://www.google.com/maps/place/Feira+Internacional+de+Lisboa,+R.+do+Bojador,+1998-010+Lisboa,+Portugal" target="_blank" rel="noopener" title="Ver no Google Maps"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cd.svg" alt="Pin" style="width:20px;vertical-align:middle;margin-right:4px;"></a>Feira Internacional de Lisboa`,
+                        `<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Abertura+Lisboa&dates=20251119T193000/20251119T203000&details=Evento+de+Abertura+em+Lisboa&location=Feira+Internacional+de+Lisboa,+R.+do+Bojador,+1998-010+Lisboa,+Portugal&ctz=Europe/Lisbon" target="_blank" rel="noopener" title="Adicionar ao Google Calendar"><img src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_16_2x.png" alt="Google Calendar" style="width:24px;vertical-align:middle;"></a>
+                         <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Abertura%20(Lisboa)%0ADTSTART:20251119T193000%0ADTEND:20251119T203000%0ADESCRIPTION:Evento%20de%20Abertura%20em%20Lisboa%0ALOCATION:Feira%20Internacional%20de%20Lisboa%2C%20R.%20do%20Bojador%2C%201998-010%20Lisboa%2C%20Portugal%0AEND:VEVENT%0AEND:VCALENDAR" download="Abertura_Lisboa.ics" title="Adicionar ao iOS/Outlook"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Calendar" style="width:22px;vertical-align:middle;"></a>`
+                    ],
+                    [
+                        "21/11/2025", "19h00", "Festividade dos Jovens",
+                        `<a href="https://www.google.com/maps/place/Multiusos+de+Gondomar" target="_blank" rel="noopener" title="Ver no Google Maps"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cd.svg" alt="Pin" style="width:20px;vertical-align:middle;margin-right:4px;"></a>Porto`,
+                        `<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Festividade+dos+Jovens+Porto&dates=20251121T193000/20251121T203000&details=Festividade+dos+Jovens+em+Porto&location=Multiusos+de+Gondomar&ctz=Europe/Lisbon" target="_blank" rel="noopener" title="Adicionar ao Google Calendar"><img src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_16_2x.png" alt="Google Calendar" style="width:24px;vertical-align:middle;"></a>
+                        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Festividade%20dos%20Jovens%20(Porto)%0ADTSTART:20251121T193000%0ADTEND:20251121T203000%0ADESCRIPTION:Festividade%20dos%20Jovens%20em%20Porto%0ALOCATION:Multiusos%20de%20Gondomar%0AEND:VEVENT%0AEND:VCALENDAR" download="Festividade_Jovens_Porto.ics" title="Adicionar ao iOS/Outlook"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Calendar" style="width:22px;vertical-align:middle;"></a>`
+                    ],
+                    [
+                        "22/11/2025", "18h00", "20 Anos do Círculo de Oração",
+                        `<a href="https://www.google.com/maps/place/Multiusos+de+Gondomar" target="_blank" rel="noopener" title="Ver no Google Maps"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cd.svg" alt="Pin" style="width:20px;vertical-align:middle;margin-right:4px;"></a>Porto`,
+                        `<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=20+Anos+do+Circulo+de+Oracao+Porto&dates=20251122T180000/20251122T200000&details=20+Anos+do+Circulo+de+Oracao+em+Porto&location=Multiusos+de+Gondomar&ctz=Europe/Lisbon" target="_blank" rel="noopener" title="Adicionar ao Google Calendar"><img src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_16_2x.png" alt="Google Calendar" style="width:24px;vertical-align:middle;"></a>
+                        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:20%20Anos%20do%20C%C3%ADrculo%20de%20Ora%C3%A7%C3%A3o%20(Porto)%0ADTSTART:20251122T180000%0ADTEND:20251122T200000%0ADESCRIPTION:20%20Anos%20do%20C%C3%ADrculo%20de%20Ora%C3%A7%C3%A3o%20em%20Porto%0ALOCATION:Multiusos%20de%20Gondomar%0AEND:VEVENT%0AEND:VCALENDAR" download="Circulo_Oracao_Porto.ics" title="Adicionar ao iOS/Outlook"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Calendar" style="width:22px;vertical-align:middle;"></a>`
+                    ],
+                    [
+                        "23/11/2025", "18h00", "20 Anos da Missão",
+                        `<a href="https://www.google.com/maps/place/Multiusos+de+Gondomar" target="_blank" rel="noopener" title="Ver no Google Maps"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cd.svg" alt="Pin" style="width:20px;vertical-align:middle;margin-right:4px;"></a>Porto`,
+                        `<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=20+Anos+da+Missao+Porto+Noite&dates=20251123T180000/20251123T200000&details=20+Anos+da+Missao+em+Porto+(Noite)&location=Multiusos+de+Gondomar&ctz=Europe/Lisbon" target="_blank" rel="noopener" title="Adicionar ao Google Calendar"><img src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_16_2x.png" alt="Google Calendar" style="width:24px;vertical-align:middle;"></a>
+                        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:20%20Anos%20da%20Miss%C3%A3o%20(Porto)%20-%20Noite%0ADTSTART:20251123T180000%0ADTEND:20251123T200000%0ADESCRIPTION:20%20Anos%20da%20Miss%C3%A3o%20em%20Porto%20-%20Noite%0ALOCATION:Multiusos%20de%20Gondomar%0AEND:VEVENT%0AEND:VCALENDAR" download="Missao_Noite_Porto.ics" title="Adicionar ao iOS/Outlook"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Calendar" style="width:22px;vertical-align:middle;"></a>`
+                    ]
+                ],
+                en: [
+                    [
+                        "11/19/2025", "7:30 PM", "Opening",
+                        `<a href="https://www.google.com/maps/place/Feira+Internacional+de+Lisboa,+R.+do+Bojador,+1998-010+Lisboa,+Portugal" target="_blank" rel="noopener" title="View on Google Maps"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cd.svg" alt="Pin" style="width:20px;vertical-align:middle;margin-right:4px;"></a>Lisbon`,
+                        `<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Opening+Lisbon&dates=20251119T193000/20251119T203000&details=Opening+event+in+Lisbon&location=Feira+Internacional+de+Lisboa,+R.+do+Bojador,+1998-010+Lisboa,+Portugal&ctz=Europe/Lisbon" target="_blank" rel="noopener" title="Add to Google Calendar"><img src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_16_2x.png" alt="Google Calendar" style="width:24px;vertical-align:middle;"></a>
+                        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Opening%20(Lisbon)%0ADTSTART:20251119T193000%0ADTEND:20251119T203000%0ADESCRIPTION:Opening%20event%20in%20Lisbon%0ALOCATION:Feira%20Internacional%20de%20Lisboa%2C%20R.%20do%20Bojador%2C%201998-010%20Lisbon%0AEND:VEVENT%0AEND:VCALENDAR" download="Opening_Lisbon.ics" title="Add to iOS/Outlook"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Calendar" style="width:22px;vertical-align:middle;"></a>`
+                    ],
+                    [
+                        "11/21/2025", "7:30 PM", "Youth Celebration",
+                        `<a href="https://www.google.com/maps/place/Multiusos+de+Gondomar" target="_blank" rel="noopener" title="View on Google Maps"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cd.svg" alt="Pin" style="width:20px;vertical-align:middle;margin-right:4px;"></a>Porto`,
+                        `<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Youth+Celebration+Porto&dates=20251121T193000/20251121T203000&details=Youth+Celebration+in+Porto&location=Multiusos+de+Gondomar&ctz=Europe/Lisbon" target="_blank" rel="noopener" title="Add to Google Calendar"><img src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_16_2x.png" alt="Google Calendar" style="width:24px;vertical-align:middle;"></a>
+                        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Youth%20Celebration%20(Porto)%0ADTSTART:20251121T193000%0ADTEND:20251121T203000%0ADESCRIPTION:Youth%20Celebration%20in%20Porto%0ALOCATION:Multiusos%20de%20Gondomar%0AEND:VEVENT%0AEND:VCALENDAR" download="Youth_Celebration_Porto.ics" title="Add to iOS/Outlook"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Calendar" style="width:22px;vertical-align:middle;"></a>`
+                    ],
+                    [
+                        "11/22/2025", "6:00 PM", "20 Years of the Women's Prayer Circle",
+                        `<a href="https://www.google.com/maps/place/Multiusos+de+Gondomar" target="_blank" rel="noopener" title="View on Google Maps"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cd.svg" alt="Pin" style="width:20px;vertical-align:middle;margin-right:4px;"></a>Porto`,
+                        `<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=20th+Anniversary+of+the+Prayer+Circle+Porto&dates=20251122T180000/20251122T200000&details=20th+Anniversary+of+the+Prayer+Circle+in+Porto&location=Multiusos+de+Gondomar&ctz=Europe/Lisbon" target="_blank" rel="noopener" title="Add to Google Calendar"><img src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_16_2x.png" alt="Google Calendar" style="width:24px;vertical-align:middle;"></a>
+                        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:20th%20Anniversary%20of%20the%20Prayer%20Circle%20(Porto)%0ADTSTART:20251122T180000%0ADTEND:20251122T200000%0ADESCRIPTION:20th%20Anniversary%20of%20the%20Prayer%20Circle%20in%20Porto%0ALOCATION:Multiusos%20de%20Gondomar%0AEND:VEVENT%0AEND:VCALENDAR" download="Prayer_Circle_Porto.ics" title="Add to iOS/Outlook"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Calendar" style="width:22px;vertical-align:middle;"></a>`
+                    ],
+                    [
+                        "11/23/2025", "6:00 PM", "20th Anniversary of the Mission",
+                        `<a href="https://www.google.com/maps/place/Multiusos+de+Gondomar" target="_blank" rel="noopener" title="View on Google Maps"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4cd.svg" alt="Pin" style="width:20px;vertical-align:middle;margin-right:4px;"></a>Porto`,
+                        `<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=20th+Anniversary+of+the+Mission+Porto+Evening&dates=20251123T180000/20251123T200000&details=20th+Anniversary+of+the+Mission+in+Porto+(Evening)&location=Multiusos+de+Gondomar&ctz=Europe/Lisbon" target="_blank" rel="noopener" title="Add to Google Calendar"><img src="https://www.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_16_2x.png" alt="Google Calendar" style="width:24px;vertical-align:middle;"></a>
+                        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:20th%20Anniversary%20of%20the%20Mission%20(Porto)%20-%20Evening%0ADTSTART:20251123T180000%0ADTEND:20251123T200000%0ADESCRIPTION:20th%20Anniversary%20of%20the%20Mission%20in%20Porto%20-%20Evening%0ALOCATION:Multiusos%20de%20Gondomar%0AEND:VEVENT%0AEND:VCALENDAR" download="Mission_Evening_Porto.ics" title="Add to iOS/Outlook"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Calendar" style="width:22px;vertical-align:middle;"></a>`
+                    ]
+                ]
+            };
+
+            // Atualiza tabela (usada no selector de idioma)
+            function updateScheduleTable(lang) {
+                const tbody = document.querySelector('table tbody');
+                // preserva o número correto de linhas e atualiza innerHTML
+                tbody.innerHTML = '';
+                scheduleRows[lang].forEach(row => {
+                    const tr = document.createElement('tr');
+                    row.forEach((cell, idx) => {
+                        const td = document.createElement('td');
+                        td.style.padding = '8px';
+                        td.style.textAlign = idx === 2 ? 'left' : 'center';
+                        td.innerHTML = cell;
+                        tr.appendChild(td);
+                    });
+                    tbody.appendChild(tr);
+                });
+            }
+
+            // Função para trocar idioma e atualizar textos
+            function setLanguage(lang) {
+                document.getElementById('nav-home').textContent = texts[lang].navHome;
+                document.getElementById('nav-site').textContent = texts[lang].navSite;
+                document.getElementById('main-title').textContent = texts[lang].mainTitle;
+                document.getElementById('schedule-title').textContent = texts[lang].scheduleTitle;
+                document.getElementById('th-date').textContent = texts[lang].thDate;
+                document.getElementById('th-time').textContent = texts[lang].thTime;
+                document.getElementById('th-event').textContent = texts[lang].thEvent;
+                document.getElementById('th-location').textContent = texts[lang].thLocation;
+                document.getElementById('th-add').textContent = texts[lang].thAdd;
+                document.getElementById('contact-title').textContent = texts[lang].contactTitle || (lang === 'pt' ? 'Entre em Contato' : 'Contact Us');
+                // atualizar blocos de texto fixos
+                document.getElementById('contact-text').innerHTML = texts[lang].contactText;
+                document.getElementById('location-title').textContent = texts[lang].locationTitle || (lang === 'pt' ? 'Localizações' : 'Locations');
+                document.getElementById('location-text').textContent = texts[lang].locationText;
+                document.getElementById('lisboa-location-city').textContent = texts[lang].lisboalocationcity;
+                document.getElementById('porto-location-info').innerHTML = texts[lang].portoLocationInfo;
+                document.getElementById('lisboa-location-info').innerHTML = texts[lang].lisboaLocationInfo;
+
+                // Troca a bandeira no seletor
+                const selectedOption = document.querySelector('#lang-select option:checked');
+                const flagUrl = selectedOption ? selectedOption.dataset.flag : (lang === 'en' ? "https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg" : "https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/pt.svg");
+                document.getElementById('flag-img').src = flagUrl;
+                document.getElementById('flag-img').alt = lang.toUpperCase();
+
+                // Atualiza a tabela
+                updateScheduleTable(lang);
+            }
+
+            // Detecta idioma do navegador ao carregar (PT por padrão)
+            window.addEventListener('DOMContentLoaded', () => {
+                const userLang = navigator.language && navigator.language.startsWith('en') ? 'en' : 'pt';
+                document.getElementById('lang-select').value = userLang;
+                setLanguage(userLang);
+            });
+
+            // Troca idioma ao selecionar
+            document.getElementById('lang-select').addEventListener('change', function() {
+                setLanguage(this.value);
+            });
+        </script>
+    </body>   
+</html>
