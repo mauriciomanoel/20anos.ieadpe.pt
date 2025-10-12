@@ -54,10 +54,8 @@ window.addEventListener('DOMContentLoaded', event => {
     const langSelect = document.getElementById('langSelect');
     langSelect.addEventListener('change', function() {
         const selectedLang = this.value;
-        alert(1);
         setLanguage(selectedLang);
     });
-
 
     function setLanguage(lang) {
         document.getElementById('navHome').textContent = texts[lang].navHome;
