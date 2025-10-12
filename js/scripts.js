@@ -55,6 +55,12 @@ window.addEventListener('DOMContentLoaded', event => {
     langSelect.addEventListener('change', function() {
         const selectedLang = this.value;
         setLanguage(selectedLang);
+        // Fechar o navbar se estiver aberto (modo mobile)
+        const navbarToggler = document.body.querySelector('.navbar-toggler');
+        const navbarCollapse = document.getElementById('navbarResponsive');
+        if (navbarToggler && navbarCollapse && navbarCollapse.classList.contains('show')) {
+            navbarToggler.click();
+        }
     });
 
     function setLanguage(lang) {
@@ -72,7 +78,6 @@ window.addEventListener('DOMContentLoaded', event => {
         document.getElementById('eventName2').textContent = texts[lang].eventName2;
         document.getElementById('eventName3').textContent = texts[lang].eventName3;
         document.getElementById('eventName4').textContent = texts[lang].eventName4;
-
         translateDates(lang);
         translateLocale(lang);
         translateAddress(lang);
@@ -80,7 +85,6 @@ window.addEventListener('DOMContentLoaded', event => {
         document.getElementById('pastorLisbonTitle').textContent = texts[lang].pastorLisbonTitle;
         document.getElementById('locationCityLisboa').textContent = texts[lang].locationCityLisboa;
         document.getElementById('locationCityPorto').textContent = texts[lang].locationCityPorto;
-
     }
 
     const texts = {
@@ -91,7 +95,6 @@ window.addEventListener('DOMContentLoaded', event => {
             navContact: "Contato",
             navSocialMidia: "Redes Sociais",
             mainTitle: `20 Anos da Igreja Assembléia de Deus <br>Missão Portugal`,
-
             scheduleTitle: "Programação",
             locationTitle: "Localização",
             contactTitle: "Contato",
@@ -107,7 +110,6 @@ window.addEventListener('DOMContentLoaded', event => {
             locationCityPorto: "Porto",
         },
         en: {
-
             navHome: "Home",
             navSchedule: "Schedule",
             navLocation: "Location",
@@ -118,7 +120,6 @@ window.addEventListener('DOMContentLoaded', event => {
             locationTitle: "Location",
             contactTitle: "Contact Us",
             socialMidiaTitle: "Social Media",
-
             eventName1: "Opening (Lisbon)",
             eventName2: "20 Years of the Youth and Teen Group",
             eventName3: "20 Years of the Prayer Circle",
@@ -128,28 +129,25 @@ window.addEventListener('DOMContentLoaded', event => {
             pastorLisbonTitle: "Local Pastor of Lisbon",
             locationCityLisboa: "Lisbon",
             locationCityPorto: "Porto",
-
         },
         es: {
-
             navHome: "Início",
             navSchedule: "Programación",
             navLocation: "Localidad",
             navContact: "Contacto",
             navSocialMidia: "Redes Sociales",
             mainTitle: `20 Años de la Iglesia Asamblea de Dios <br>Misión en Portugal`,
-
             scheduleTitle: "Programación",
             locationTitle: "Localidad",
             contactTitle: "Contacto",
-            socialMidiaTitle: "Redes Sociales",
+            socialMidiaTitle: "Redes Sociais",
             eventName1: "Apertura (Lisboa)",
             eventName2: "20 Años del Grupo de Jóvenes y Adolescentes",
             eventName3: "20 Años del Circulo de Oración",
             eventName4: "Cierre: 20 Anos de la Misión",
             eventDate1: "Fecha",
-            pastorPortoTitle: "Pastor Local en Porto",
-            pastorLisbonTitle: "Pastor Local en Lisboa",
+            pastorPortoTitle: "Pastor Local em Porto",
+            pastorLisbonTitle: "Pastor Local em Lisboa",
             locationCityLisboa: "Lisboa",
             locationCityPorto: "Porto",
         }
