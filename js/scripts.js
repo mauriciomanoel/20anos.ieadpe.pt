@@ -140,7 +140,7 @@ window.addEventListener('DOMContentLoaded', event => {
             scheduleTitle: "Programación",
             locationTitle: "Localidad",
             contactTitle: "Contacto",
-            socialMidiaTitle: "Redes Sociais",
+            socialMidiaTitle: "Redes Sociales",
             eventName1: "Apertura (Lisboa)",
             eventName2: "20 Años del Grupo de Jóvenes y Adolescentes",
             eventName3: "20 Años del Circulo de Oración",
