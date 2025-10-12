@@ -41,38 +41,34 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#page-top" id="navHome">Início</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#programacao" id="navSchedule">Programação</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#localizacao" id="navLocation">Localização</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#contato" id="navContact">Contato</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#redessociais" id="navSocialMidia">Redes Sociais</a></li>
-                    
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#page-top"
+                            id="navHome">Início</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#programacao"
+                            id="navSchedule">Programação</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#localizacao"
+                            id="navLocation">Localização</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contato"
+                            id="navContact">Contato</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#redessociais"
+                            id="navSocialMidia">Redes Sociais</a></li>
+
                     <li class="nav-item dropdown mx-0 mx-lg-1">
-                        <a class="nav-link dropdown-toggle nav-link py-3 px-0 px-lg-3 rounded" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img id="flag-img" src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/pt.svg" alt="PT" width="24">
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
-                            <li>
-                                <a class="dropdown-item" href="#" data-lang="pt">
-                                    <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/pt.svg" width="24"> Português
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#" data-lang="en">
-                                    <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg" width="24"> English
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#" data-lang="es">
-                                    <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/es.svg" width="24"> Español
-                                </a>
-                            </li>
-                        </ul>
+
+
+                        <select id="langSelect" class="form-select" style="width: auto; display: inline-block;">
+                            <option value="pt"
+                                data-flag="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/pt.svg">🇵🇹
+                                Português</option>
+                            <option value="en"
+                                data-flag="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg">🇬🇧 English
+                            </option>
+                            <option value="es"
+                                data-flag="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/es.svg">🇪🇸 Español
+                            </option>
+                        </select>
+
+
+
                     </li>
                 </ul>
             </div>
@@ -96,7 +92,8 @@
 
     <section class="page-section" id="programacao">
         <div class="container">
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" id="scheduleTitle">Programação</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" id="scheduleTitle">
+                Programação</h2>
 
             <div class="container mt-4">
                 <div class="row">
@@ -106,10 +103,10 @@
                                 alt="Feira Internacional de Lisboa">
                             <div class="card-body">
                                 <h5 class="card-title" id="eventName1">Abertura (Lisboa)</h5>
-                                <p class="card-text mb-1"><strong class="event-date-label">Data:</strong> 19/11/2025 - 19h00</p>
+                                <p class="card-text mb-1"><strong class="event-date-label">Data:</strong> 19/11/2025 -
+                                    19h00</p>
                                 <p class="card-text"><strong class="event-locale-label">Local:</strong>
-                                    <a href="https://maps.app.goo.gl/XjCtGrKqmrctgJHz9"
-                                        target="_blank" rel="noopener">
+                                    <a href="https://maps.app.goo.gl/XjCtGrKqmrctgJHz9" target="_blank" rel="noopener">
                                         Feira Internacional de Lisboa
                                     </a>
                                 </p>
@@ -135,17 +132,16 @@
                             <img src="images/multiusos-interior.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title" id="eventName2">20 Anos do Grupo de Jovens e Adolescentes</h5>
-                                <p class="card-text mb-1"><strong class="event-date-label">Data:</strong> 21/11/2025 - 19h00</p>
+                                <p class="card-text mb-1"><strong class="event-date-label">Data:</strong> 21/11/2025 -
+                                    19h00</p>
                                 <p class="card-text"><strong class="event-locale-label">Local: </strong>
-                                    <a href="https://maps.app.goo.gl/qXZGfTtnojZx3G6z9" target="_blank"
-                                        rel="noopener">
+                                    <a href="https://maps.app.goo.gl/qXZGfTtnojZx3G6z9" target="_blank" rel="noopener">
                                         Multiusos de Gondomar no Porto
                                     </a>
                                 </p>
-                                <div class="calendar-links">                            
-                                    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=20+Anos+da+IEADPE+Portugal%3A+Grupo+de+Jovens+e+Adolescentes&dates=20251121T190000/20251121T220000&details=20+Anos+do+Grupo+de+Jovens+e+Adolescentes+da+Igreja+Assembleia+de+Deus+Miss%C3%A3o+Portugal&location=Multiusos+de+Gondomar%2C+Av.+Multiusos%2C+4420-015+Gondomar%2C+Portugal&ctz=Europe/Lisbon" 
-                                        target="_blank" 
-                                        class="calendar-btn google">
+                                <div class="calendar-links">
+                                    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=20+Anos+da+IEADPE+Portugal%3A+Grupo+de+Jovens+e+Adolescentes&dates=20251121T190000/20251121T220000&details=20+Anos+do+Grupo+de+Jovens+e+Adolescentes+da+Igreja+Assembleia+de+Deus+Miss%C3%A3o+Portugal&location=Multiusos+de+Gondomar%2C+Av.+Multiusos%2C+4420-015+Gondomar%2C+Portugal&ctz=Europe/Lisbon"
+                                        target="_blank" class="calendar-btn google">
                                         <img src="images/icons8-google-calendar.svg" alt="Google Calendar" width="24">
                                         Google Calendar
                                     </a>
@@ -165,10 +161,10 @@
                             <img src="images/multiusos-interior.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title" id="eventName3">20 Anos do Círculo de Oração</h5>
-                                <p class="card-text mb-1"><strong class="event-date-label">Data:</strong> 22/11/2025 - 18h00</p>
+                                <p class="card-text mb-1"><strong class="event-date-label">Data:</strong> 22/11/2025 -
+                                    18h00</p>
                                 <p class="card-text"><strong class="event-locale-label">Local: </strong>
-                                    <a href="https://maps.app.goo.gl/qXZGfTtnojZx3G6z9" target="_blank"
-                                        rel="noopener">
+                                    <a href="https://maps.app.goo.gl/qXZGfTtnojZx3G6z9" target="_blank" rel="noopener">
                                         Multiusos de Gondomar no Porto
                                     </a>
                                 </p>
@@ -194,10 +190,10 @@
                             <img src="images/multiusos-interior.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title" id="eventName4">Encerramento: 20 Anos da Missão</h5>
-                                <p class="card-text mb-1"><strong class="event-date-label">Data:</strong> 23/11/2025 - 17h00</p>
+                                <p class="card-text mb-1"><strong class="event-date-label">Data:</strong> 23/11/2025 -
+                                    17h00</p>
                                 <p class="card-text"><strong class="event-locale-label">Local: </strong>
-                                    <a href="https://maps.app.goo.gl/qXZGfTtnojZx3G6z9" target="_blank"
-                                        rel="noopener">
+                                    <a href="https://maps.app.goo.gl/qXZGfTtnojZx3G6z9" target="_blank" rel="noopener">
                                         Multiusos de Gondomar no Porto
                                     </a>
                                 </p>
@@ -224,7 +220,8 @@
 
     <section class="page-section" id="localizacao">
         <div class="container">
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" id="locationTitle">Localização</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" id="locationTitle">
+                Localização</h2>
             <div class="divider-custom"></div>
 
             <div class="location-block text-secondary">
@@ -258,7 +255,8 @@
 
     <section class="page-section" id="contato">
         <div class="container">
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" id="contactTitle">Contacto</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" id="contactTitle">Contacto
+            </h2>
             <div class="divider-custom"></div>
 
             <div class="row">
@@ -285,7 +283,8 @@
 
     <section class="page-section" id="redessociais">
         <div class="container">
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" id="socialMidiaTitle">Redes Sociais</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" id="socialMidiaTitle">Redes
+                Sociais</h2>
             <div class="divider-custom"></div>
 
             <div class="row row-cols-1 row-cols-md-2 g-4">

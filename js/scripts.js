@@ -51,30 +51,46 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    const langItems = document.querySelectorAll('.dropdown-item[data-lang]');
-    langItems.forEach(item => {
-        item.addEventListener('click', (event) => {
-            event.preventDefault(); // evita que o link recarregue a página
-
-            const selectedLang = item.getAttribute('data-lang');
-            console.log('Idioma selecionado:', selectedLang);
-
-            const flagImg = document.getElementById('flag-img');
-            if (flagImg) {
-                if (selectedLang === 'pt') {
-                    flagImg.src = 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/pt.svg';
-                    flagImg.alt = 'PT';
-                } else if (selectedLang === 'en') {
-                    flagImg.src = 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg';
-                    flagImg.alt = 'EN';
-                } else if (selectedLang === 'es') {
-                    flagImg.src = 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/es.svg';
-                    flagImg.alt = 'ES';
-                }
-            }
-            setLanguage(selectedLang);
-        });
+    const langSelect = document.getElementById('langSelect');
+    const flagImg = document.getElementById('flag-img');
+    langSelect.addEventListener('change', function() {
+        const selectedLang = this.value;
+        const selectedOption = this.options[this.selectedIndex];
+        const flagUrl = selectedOption.getAttribute('data-flag');
+        setLanguage(selectedLang);
     });
+
+    // const langItems = document.querySelectorAll('.lang-select[data-lang]');
+    // langItems.forEach(item => {
+    //     item.addEventListener('click', (event) => {
+    //         event.preventDefault();
+    //         event.stopPropagation();
+    //         const selectedLang = item.getAttribute('data-lang');
+    //         console.log('Idioma selecionado:', selectedLang);
+
+    //         const flagImg = document.getElementById('flag-img');
+    //         if (flagImg) {
+    //             if (selectedLang === 'pt') {
+    //                 flagImg.src = 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/pt.svg';
+    //                 flagImg.alt = 'PT';
+    //             } else if (selectedLang === 'en') {
+    //                 flagImg.src = 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg';
+    //                 flagImg.alt = 'EN';
+    //             } else if (selectedLang === 'es') {
+    //                 flagImg.src = 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/es.svg';
+    //                 flagImg.alt = 'ES';
+    //             }
+    //         }
+
+    //         setLanguage(selectedLang);
+
+    //         // Reabrir o dropdown manualmente
+    //         setTimeout(() => {
+    //             const dropdown = bootstrap.Dropdown.getOrCreateInstance(document.getElementById('langDropdown'));
+    //             dropdown.show();
+    //         }, 0);
+    //     });
+    // });
 
     function setLanguage(lang) {
         document.getElementById('navHome').textContent = texts[lang].navHome;
