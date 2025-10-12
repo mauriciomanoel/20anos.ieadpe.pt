@@ -1,12 +1,9 @@
 @charset "UTF-8";
 
-
-
 .navbar-brand img {
     height: 70px; /* define a altura desejada */
     width: auto;  /* mantém proporção da imagem */
 }
-
 
 .event-card {
         border: 1px solid #ccc;
@@ -141,3 +138,13 @@ a:hover {
   display: block;
   margin: 0 auto; /* centraliza */
 }
+
+:root {
+  --bs-primary-rgb: 84,188,232 !important;
+}
+
+
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+    color: #fff;
+    background: #54bce8 !important;
+  }
