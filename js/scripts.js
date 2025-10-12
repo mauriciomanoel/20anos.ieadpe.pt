@@ -128,6 +128,10 @@ window.addEventListener('DOMContentLoaded', event => {
                     locationTitle: "Localização",
                     contactTitle: "Contato",
                     socialMidiaTitle: "Redes Sociais",
+                    eventName1: "Abertura (Lisboa)",
+                    eventName2: "Festividade dos Jovens",
+                    eventName3: "20 Anos do Círculo de Oração",
+                    eventName3: "Encerramento: 20 Anos da Missão",
 
 
 
