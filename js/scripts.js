@@ -173,7 +173,7 @@ window.addEventListener('DOMContentLoaded', event => {
         labels.forEach(
             label => {
                 if (language === 'en') {
-                    label.textContent = 'Date:';
+                    label.textContent = 'Location:';
                 } else if (language === 'es') {
                     label.textContent = 'Lugar:';
                 } else {
