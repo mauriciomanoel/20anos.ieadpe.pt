@@ -1,32 +1,33 @@
 @charset "UTF-8";
 
 .navbar-brand img {
-    height: 70px; /* define a altura desejada */
-    width: auto;  /* mantém proporção da imagem */
+  height: 70px;
+  width: auto;
 }
 
 .event-card {
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        padding: 12px;
-        margin-bottom: 12px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        font-family: Arial, sans-serif;
-    }
- 
-    .map-responsive{
-                overflow:hidden;
-                padding-bottom:56.25%;
-                position:relative;
-                height:0;
-            }
-            .map-responsive iframe{
-                left:0;
-                top:0;
-                height:90%;
-                width:100%;
-                position:absolute;
-            }
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 90%;
+  width: 100%;
+  position: absolute;
+}
 
 .fa-brands {
   padding: 20px;
@@ -39,7 +40,7 @@
 }
 
 .fa:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .fa-facebook {
@@ -58,41 +59,49 @@
 }
 
 a {
-    text-decoration: none;  /* remove o sublinhado */
-    color: inherit;         /* herda a cor do elemento pai */
+  text-decoration: none;
+  /* remove o sublinhado */
+  color: inherit;
+  /* herda a cor do elemento pai */
 }
 
 /* Opcional: adicionar efeito de hover */
 a:hover {
-    text-decoration: underline;  /* mostra sublinhado apenas ao passar o mouse */
-    color: #007BFF;              /* muda a cor ao passar o mouse */
+  text-decoration: underline;
+  /* mostra sublinhado apenas ao passar o mouse */
+  color: #007BFF;
+  /* muda a cor ao passar o mouse */
 }
 
 .img-row {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: 10px;
-                position: relative;
-                z-index: 1;
-            }
-            .reveal-img {
-                width: 350px;
-                max-width: 90vw;
-                border-radius: 28px;
-                animation: pulse 2s infinite;
-                display: block;
-                margin: 0 10px;
-                background: transparent;
-            }
-            .small-img {
-                width: 180px;
-                max-width: 50vw;
-            }
- 
-            .card-img-top {
-  height: 200px; /* ajuste conforme necessário */
-  object-fit: cover; /* mantém o enquadramento central */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.reveal-img {
+  width: 350px;
+  max-width: 90vw;
+  border-radius: 28px;
+  animation: pulse 2s infinite;
+  display: block;
+  margin: 0 10px;
+  background: transparent;
+}
+
+.small-img {
+  width: 180px;
+  max-width: 50vw;
+}
+
+.card-img-top {
+  height: 200px;
+  /* ajuste conforme necessário */
+  object-fit: cover;
+  /* mantém o enquadramento central */
 }
 
 .calendar-links {
@@ -133,18 +142,33 @@ a:hover {
 
 .logo-reduzida {
   margin-top: 20px !important;
-  width: 200px; /* ajuste o tamanho que quiser */
-  height: auto; /* mantém proporção */
+  width: 200px;
+  /* ajuste o tamanho que quiser */
+  height: auto;
+  /* mantém proporção */
   display: block;
-  margin: 0 auto; /* centraliza */
+  margin: 0 auto;
+  /* centraliza */
 }
 
 :root {
-  --bs-primary-rgb: 84,188,232 !important;
+  --bs-primary-rgb: 84, 188, 232 !important;
 }
 
 
-  #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
-    color: #fff;
-    background: #54bce8 !important;
-  }
+#mainNav .navbar-nav>li.nav-item>a.nav-link.active {
+  color: #fff;
+  background: #54bce8 !important;
+}
+
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#lang-select {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+}
