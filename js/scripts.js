@@ -102,7 +102,7 @@ window.addEventListener('DOMContentLoaded', event => {
             eventName4: "Encerramento: 20 Anos da Missão",
             eventDate1: "Data",
             pastorPortoTitle: "Pastor Local do Porto",
-            pastorLisbonTitle: "Pastor Local do Porto",
+            pastorLisbonTitle: "Pastor Local do Lisboa",
             locationCityLisboa: "Lisboa",
             locationCityPorto: "Porto",
         },
@@ -149,7 +149,7 @@ window.addEventListener('DOMContentLoaded', event => {
             eventName4: "Cierre: 20 Anos de la Misión",
             eventDate1: "Fecha",
             pastorPortoTitle: "Pastor Local en Porto",
-            pastorLisbonTitle: "Pastor Local en Porto",
+            pastorLisbonTitle: "Pastor Local en Lisboa",
             locationCityLisboa: "Lisboa",
             locationCityPorto: "Porto",
         }
