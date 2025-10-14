@@ -76,8 +76,11 @@ window.addEventListener('DOMContentLoaded', event => {
         document.getElementById('socialMidiaTitle').textContent = texts[lang].socialMidiaTitle;
         document.getElementById('eventName1').textContent = texts[lang].eventName1;
         document.getElementById('eventName2').textContent = texts[lang].eventName2;
+        document.getElementById('eventName3.0').textContent = texts[lang].eventName30;
         document.getElementById('eventName3').textContent = texts[lang].eventName3;
         document.getElementById('eventName4').textContent = texts[lang].eventName4;
+        document.getElementById('eventName4.0').textContent = texts[lang].eventName40;
+
         translateDates(lang);
         translateLocale(lang);
         translateAddress(lang);
@@ -100,8 +103,11 @@ window.addEventListener('DOMContentLoaded', event => {
             contactTitle: "Contato",
             socialMidiaTitle: "Redes Sociais",
             eventName1: "Abertura (Lisboa)",
-            eventName2: "20 Anos do Grupo de Jovens e Adolescentes",
+            eventName2: "Festividade dos Jovens e Adolescentes",
+            eventName30: "Tarde de Estudo",
             eventName3: "20 Anos do Círculo de Oração",
+            eventName40: "Batismo em Águas",
+            eventName40: "Bautismo en Aguas",
             eventName4: "Encerramento: 20 Anos da Missão",
             eventDate1: "Data",
             pastorPortoTitle: "Pastor Local do Porto",
@@ -121,8 +127,10 @@ window.addEventListener('DOMContentLoaded', event => {
             contactTitle: "Contact Us",
             socialMidiaTitle: "Social Media",
             eventName1: "Opening (Lisbon)",
-            eventName2: "20 Years of the Youth and Teen Group",
+            eventName2: "Youth and Teens Service",
+            eventName30: "Afternoon Bible Study",
             eventName3: "20 Years of the Prayer Circle",
+            eventName40: "Water Baptism",
             eventName4: "Closing: 20 Years of the Mission",
             eventDate1: "Date",
             pastorPortoTitle: "Local Pastor of Porto",
@@ -142,8 +150,10 @@ window.addEventListener('DOMContentLoaded', event => {
             contactTitle: "Contacto",
             socialMidiaTitle: "Redes Sociales",
             eventName1: "Apertura (Lisboa)",
-            eventName2: "20 Años del Grupo de Jóvenes y Adolescentes",
+            eventName2: "Festividad de Jóvenes y Adolescentes",
+            eventName30: "Tarde de Estudio Bíblico",
             eventName3: "20 Años del Circulo de Oración",
+            eventName40: "Bautismo en Aguas",
             eventName4: "Cierre: 20 Anos de la Misión",
             eventDate1: "Fecha",
             pastorPortoTitle: "Pastor Local em Porto",
