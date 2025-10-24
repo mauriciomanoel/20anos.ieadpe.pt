@@ -1,0 +1,38 @@
+name: 🚀 Deploy automático para servidor IEADPE (20anos.ieadpe.pt)
+
+on:
+  push:
+    branches:
+      - main  # executa sempre que houver push/merge na main
+
+jobs:
+  deploy:
+    name: Fazer deploy no servidor IEADPE
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📦 Checkout do código
+        uses: actions/checkout@v4
+
+      - name: 🚀 Conectar e executar comandos no servidor via SSH
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: 34.56.44.130               # IP do seu servidor
+          username: mauricio               # ou o usuário SSH configurado
+          key: ${{ secrets.IEADPE_SSH_KEY }}  # chave privada adicionada nos Secrets do repositório
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+
+          script: |
+            echo "Iniciando deploy em 20anos.ieadpe.pt..."
+            
+            cd /var/www/html/20anos.ieadpe.pt
+            
+            echo "→ Atualizando código..."
+            git fetch origin main
+            git reset --hard origin/main
+            git pull origin main
+
+            echo "→ Ajustando permissões..."
+            sudo chown -R www-data:www-data /var/www/html/20anos.ieadpe.pt
+
+            echo "✅ Deploy concluído com sucesso!"
