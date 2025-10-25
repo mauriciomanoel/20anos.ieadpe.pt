@@ -1,4 +1,5 @@
 # Bloquear acesso ao diretório .git e outros arquivos sensíveis
 RedirectMatch 404 /\.git
+RedirectMatch 404 /\.github
 RedirectMatch 404 /\.env
 RedirectMatch 404 /(composer\.json|composer\.lock|package\.json|package-lock\.json)
