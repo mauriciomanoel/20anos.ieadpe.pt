@@ -18,7 +18,7 @@ jobs:
         uses: appleboy/ssh-action@v1.1.0
         with:
           host: 34.44.179.32                  # IP do seu servidor
-          username: ieadpeportugal            # ou o usuário SSH configurado
+          username: mauricio            # ou o usuário SSH configurado
           key: ${{ secrets.VINTEANOS }}  # chave privada adicionada nos Secrets do repositório
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
 
