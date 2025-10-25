@@ -17,8 +17,8 @@ jobs:
       - name: 🚀 Conectar e executar comandos no servidor via SSH
         uses: appleboy/ssh-action@v1.1.0
         with:
-          host: 34.56.44.130               # IP do seu servidor
-          username: mauricio               # ou o usuário SSH configurado
+          host: 34.44.179.32                  # IP do seu servidor
+          username: ieadpeportugal            # ou o usuário SSH configurado
           key: ${{ secrets.IEADPE_SSH_KEY }}  # chave privada adicionada nos Secrets do repositório
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
 
