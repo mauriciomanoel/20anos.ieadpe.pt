@@ -27,10 +27,12 @@ jobs:
             
             cd /var/www/html/20anos.ieadpe.pt
             
+            sudo chown -R mauricio:mauricio /var/www/html/20anos.ieadpe.pt
+
             echo "→ Atualizando código..."
-            sudo git fetch origin main
-            sudo git reset --hard origin/main
-            sudo git pull origin main
+            git fetch origin main
+            git reset --hard origin/main
+            git pull origin main
 
             echo "→ Ajustando permissões..."
             sudo chown -R www-data:www-data /var/www/html/20anos.ieadpe.pt
